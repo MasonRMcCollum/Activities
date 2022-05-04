@@ -234,7 +234,10 @@
 ];
 
 // using map, create a list of cities from the data
-
+const cities = data.map(user => {return user.address.city});
+console.log(cities)
 // create an array of latitude and longitude coordinate pairs
-
+const coordinates = data.map(user =>{return user.address.geo})
+console.log(coordinates)
 // create an array of strings that combine the company's catchPhrase and bs
+const phrase = data.map(user =>{return})

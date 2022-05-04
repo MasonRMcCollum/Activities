@@ -234,9 +234,28 @@ const data = [
 ];
 
 // using forEach, print a list of cities from the data
-
+data.forEach(user =>
+console.log(user.address.city));
 // create an array of latitude and longitude coordinate pairs
-
+const coords1 = [];
+data.forEach(user => {
+  let lat = user.address.geo.lat;
+  let lng = user.address.geo.lat;
+  coords1.push([lat, lng])}
+);
+console.log(coords1)
 // create an array of strings that combine the company's catchPhrase and bs
-
+const coords2 = [];
+data.forEach(user => {
+  let phrase = user.company.catchPhrase;
+  let bs = user.company.bs;
+  coords2.push([phrase, bs])
+});
+console.log(coords2)
 // query the HTML for the class class-week, then use forEach to change the text content
+const classes = document.querySelectorAll(".class-week");
+
+classes.forEach(
+  (htmlElement, i) =>
+  (htmlElement.textcontent = `text content is changed to class-week ${i}`)
+);

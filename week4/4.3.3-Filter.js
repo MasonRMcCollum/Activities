@@ -1213,7 +1213,11 @@ const data = [
 ];
 
 // filter the to-dos for incomplete tasks
-
+const incompleteTasks = data.filter(tasks => tasks.completed , 1 );
+console.log(incompleteTasks)
 // filter for user 6's tasks
-
+const user6tasks = data.filter(user => user.userId ===6);
+console.log(user6tasks)
 // filter for tasks with a title less than 24 characters long
+const characters = data.filter(task => task.title.length < 24)
+console.log(characters)
